@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
           
           <div className="mb-6 font-serif text-gray-700">
             <p className="mb-4">
-            hi, i'm colburn, who enjoys building reliable solutions for complex problems. currently helping improve the checkout experience at <b>New Balance</b>, where I work on making online shopping smoother for everyone. 
+            hi, im colburn, who enjoys building reliable solutions for complex problems. currently helping improve the checkout experience at <b>New Balance</b>, where I work on making online shopping smoother for everyone. 
             </p>
             
             <p className="mb-4">
@@ -15,7 +15,6 @@ const AboutPage: React.FC = () => {
               i believe in writing clean, maintainable code that stands the test of time.
             </p>
           </div>
-          
           <div className="mb-8">
             <h3 className="text-lg font-mono mb-2 text-black">skills & technologies</h3>
             <table className="w-full border-collapse text-sm">
