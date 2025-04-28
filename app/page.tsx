@@ -1,103 +1,64 @@
-import Image from "next/image";
-
+'use client'
+import React from 'react';
+import Link from 'next/link';
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  return (
+    <div className="flex flex-col min-h-screen bg-white-100 text-black">
+        <>
+          <section className="mb-10">
+            <div className="mb-6">
+              <h2 className="text-2xl font-serif mb-2">software enigneer</h2>
+              <p className="text-gray-700 font-serif">building digital experiences with typescript, react, and modern web technologies. 
+                <br/> currently focused on domain-driven design and ai systems in production. 
+                <br/> im currently exploring creative use cases of ai in education and entertainment.</p>
+              <p className="text-gray-700 font-serif">also reading <b>ai engineering</b> by chip huyen.</p>
+              <p className="text-gray-700 font-serif">i enjoy learning about fun technical challenges and collaborating with great teams.</p>
+            </div>
+            <Link href="/projects" className="bg-orange-600 text-white px-2 py-1 text-sm font-mono hover:bg-orange-700">view projects</Link>
+          </section>
+
+          <section className="mb-10">
+            <h3 className="text-lg font-serif mb-4 border-b border-gray-300 pb-1">latest posts</h3>
+            <table className="w-full border-collapse">
+              <tbody>
+                <tr className="hover:bg-gray-200">
+                  <td className="py-2">
+                    <span className="text-sm text-gray-500 mr-2">24 Apr:</span>
+                    <a href="#" className="text-blue-800 hover:underline">Domain-Driven Design with TypeScript</a>
+                  </td>
+                </tr>
+                <tr className="hover:bg-gray-200">
+                  <td className="py-2">
+                    <span className="text-sm text-gray-500 mr-2">15 Apr:</span>
+                    <a href="#" className="text-blue-800 hover:underline">Building Accessible UIs with Tailwind</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section className="mb-10">
+            <h3 className="text-lg font-serif mb-4 border-b border-gray-300 pb-1">featured projects</h3>
+            <div className="space-y-4">
+              <div className="bg-gray-50 p-4 border border-gray-300">
+                <h4 className="font-mono font-bold">e-commerce platform</h4>
+                <p className="text-gray-700 text-sm my-2 font-serif">a full-stack e-commerce solution built with next.js and supabase.</p>
+                <div className="text-xs text-gray-500 font-mono">
+                  Next.js | TypeScript | Tailwind
+                </div>
+              </div>
+              <div className="bg-gray-50 p-4 border border-gray-300">
+                <h4 className="font-mono font-bold">Task Management App</h4>
+                <p className="text-gray-700 text-sm my-2 font-serif">A productivity tool with drag-and-drop interface and real-time updates.</p>
+                <div className="text-xs text-gray-500 font-mono">
+                  React | Firebase | TypeScript
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+  </div>
+
   );
 }
