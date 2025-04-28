@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Site
+
+A minimalist portfolio site with a Hacker News inspired design, built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Clean, retro-inspired black and white design
+- Responsive layout
+- Blog posts section with individual post pages
+- Projects showcase
+- About page with skills and experience
+- Social links
+
+## Tech Stack
+
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Architecture**: Domain-driven design
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ and npm/yarn
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/personal.git
+   cd portfolio-site
+   ```
+
+2. Install dependencies:
+   ```bash
+   bun install
+   # or
+   yarn
+   ```
+
+3. Run the development server:
+   ```bash
+   bun run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+│   ├── layout/        # Layout components (Header, Footer, etc.)
+│   ├── ui/            # Atomic UI components
+│   └── sections/      # Section-specific components
+├── domain/            # Domain models and logic
+│   ├── posts/         # Blog post domain
+│   ├── projects/      # Projects domain
+│   └── social/        # Social links domain
+├── pages/             # Next.js pages/routes
+├── styles/            # Global styles and Tailwind config
+└── utils/             # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Personal Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Update your personal information in the following files:
 
-## Learn More
+- `src/components/layout/Header.tsx` - Change site title
+- `src/components/layout/Footer.tsx` - Update social links
+- `src/pages/about.tsx` - Edit your bio, skills, and experience
+- `src/domain/posts` - Add your own blog posts
+- `src/domain/projects` - Add your projects
 
-To learn more about Next.js, take a look at the following resources:
+### Styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project uses Tailwind CSS. You can customize the theme by editing:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `tailwind.config.js` - Change colors, fonts, and other theme settings
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy this site is using Vercel:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to a GitHub repository
+2. Connect your repository to Vercel
+3. Deploy with one click
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

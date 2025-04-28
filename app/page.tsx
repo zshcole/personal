@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white-100 text-black">
         <>
-          <section className="mb-10">
+          <section className="mt-20 mb-10">
             <div className="mb-6">
               <h2 className="text-2xl font-serif mb-2">software enigneer</h2>
               <p className="text-gray-700 font-serif">building digital experiences with typescript, react, and modern web technologies. 
@@ -38,21 +38,21 @@ export default function Home() {
             </table>
           </section>
 
-          <section className="mb-10">
+          <section className="mb-1">
             <h3 className="text-lg font-serif mb-4 border-b border-gray-300 pb-1">featured projects</h3>
             <div className="space-y-4">
               <div className="bg-gray-50 p-4 border border-gray-300">
                 <h4 className="font-mono font-bold">e-commerce platform</h4>
                 <p className="text-gray-700 text-sm my-2 font-serif">a full-stack e-commerce solution built with next.js and supabase.</p>
                 <div className="text-xs text-gray-500 font-mono">
-                  Next.js | TypeScript | Tailwind
+                  next.js | typescript | tailwind
                 </div>
               </div>
               <div className="bg-gray-50 p-4 border border-gray-300">
-                <h4 className="font-mono font-bold">Task Management App</h4>
-                <p className="text-gray-700 text-sm my-2 font-serif">A productivity tool with drag-and-drop interface and real-time updates.</p>
+                <h4 className="font-mono font-bold">task management app</h4>
+                <p className="text-gray-700 text-sm my-2 font-serif">a productivity tool with drag-and-drop interface and real-time updates.</p>
                 <div className="text-xs text-gray-500 font-mono">
-                  React | Firebase | TypeScript
+                  react | firebase | typescript
                 </div>
               </div>
             </div>

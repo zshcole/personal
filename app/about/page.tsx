@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
               <tbody>
                 <tr className="border-b border-gray-300">
                   <td className="py-2 pr-4 font-mono font-bold text-black" width="120">frontend</td>
-                  <td className="py-2 text-gray-700">react, next.js, javaScript | typescript, chakra ui</td>
+                  <td className="py-2 text-gray-700">react, next.js, javascript | typescript, chakra ui</td>
                 </tr>
                 <tr className="border-b border-gray-300">
                   <td className="py-2 pr-4 font-mono font-bold text-black">backend</td>

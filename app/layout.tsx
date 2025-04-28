@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-gray-100 text-black">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main className="max-w-4xl mx-auto px-4 py-6 flex-grow">
+      <main className="max-w-4xl mx-auto px-4 py-4 flex-grow">
         {children}
       </main>
       <Footer />

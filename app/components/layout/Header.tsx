@@ -13,8 +13,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
     <header className="bg-orange-600 text-white py-2">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link href="/" className="font-serif font-bold text-xl">
-            colburn.omareo
+          <Link href="/" onClick={() => setCurrentPage('home')} className="font-serif font-bold text-xl">
+            colburn.sanders
           </Link>
           <nav>
             <ul className="flex space-x-4 font-mono text-sm">
@@ -28,17 +28,26 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
             </Link>
             </li>
               <li>
-                <Link href="/about" className="hover:underline">
+                <Link 
+                  href="/about" 
+                  onClick={() => setCurrentPage('about')} 
+                  className={currentPage === 'about' ? 'underline' : 'hover:underline'}>
                   about
                 </Link>
               </li>
               <li>
-                <Link href="/posts" className="hover:underline">
+                <Link 
+                  href="/posts" 
+                  onClick={() => setCurrentPage('posts')} 
+                  className={currentPage === 'posts' ? 'underline' : 'hover:underline'}>
                   posts
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:underline">
+                <Link 
+                  href="/projects" 
+                  onClick={() => setCurrentPage('projects')} 
+                  className={currentPage === 'projects' ? 'underline' : 'hover:underline'}>
                   projects
                 </Link>
               </li>
