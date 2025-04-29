@@ -11,7 +11,7 @@ export default function Home() {
               <h2 className="text-2xl font-serif mb-2">software enigneer</h2>
               <p className="text-gray-700 font-serif">building digital experiences with typescript, react, and modern web technologies. 
                 <br/> currently focused on domain-driven design and ai systems in production. 
-                <br/> im currently exploring creative use cases of ai in education and entertainment.</p>
+                <br/> exploring creative use cases of ai in education and entertainment.</p>
               <p className="text-gray-700 font-serif">also reading <b>ai engineering</b> by chip huyen.</p>
               <p className="text-gray-700 font-serif">i enjoy learning about fun technical challenges and collaborating with great teams.</p>
             </div>
@@ -25,13 +25,13 @@ export default function Home() {
                 <tr className="hover:bg-gray-200">
                   <td className="py-2">
                     <span className="text-sm text-gray-500 mr-2">24 Apr:</span>
-                    <a href="#" className="text-blue-800 hover:underline">Domain-Driven Design with TypeScript</a>
+                    <Link href="#" className="text-blue-800 hover:underline">Domain-Driven Design with TypeScript</Link>
                   </td>
                 </tr>
                 <tr className="hover:bg-gray-200">
                   <td className="py-2">
                     <span className="text-sm text-gray-500 mr-2">15 Apr:</span>
-                    <a href="#" className="text-blue-800 hover:underline">Building Accessible UIs with Tailwind</a>
+                    <Link href="#" className="text-blue-800 hover:underline">Building Accessible UIs with Tailwind</Link>
                   </td>
                 </tr>
               </tbody>
