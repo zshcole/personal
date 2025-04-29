@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white-100 text-black">
         <>
-          <section className="mt-20 mb-10">
+          <section className="mb-10">
             <div className="mb-6">
-              <h2 className="text-2xl font-serif mb-2">software enigneer</h2>
+              <h2 className="text-2xl font-serif mb-2 border-b border-gray-300">software enigneer</h2>
               <p className="text-gray-700 font-serif">building digital experiences with typescript, react, and modern web technologies. 
                 <br/> currently focused on domain-driven design and ai systems in production. 
                 <br/> exploring creative use cases of ai in education and entertainment.</p>
