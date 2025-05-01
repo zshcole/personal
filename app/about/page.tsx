@@ -52,6 +52,15 @@ const AboutPage: React.FC = () => {
             <div className="mb-4">
               <div className="flex items-baseline justify-between border-b border-gray-300 py-1">
                 <span className="font-mono text-black">full stack developer</span>
+                <span className="text-sm text-gray-600"><b>2023 - 2023</b></span>
+              </div>
+                <div className="text-sm mt-1 text-gray-700">
+                <b>Mu Methods</b> — full stack developer, led the development and architecture of a component-driven design system utilizing storybook to enhance the design process and promote the reuse of styled components.
+                </div>
+            </div>
+            <div className="mb-4">
+              <div className="flex items-baseline justify-between border-b border-gray-300 py-1">
+                <span className="font-mono text-black">full stack developer</span>
                 <span className="text-sm text-gray-600"><b>2020 - 2023</b></span>
               </div>
               <div className="text-sm mt-1 text-gray-700">
