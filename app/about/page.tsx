@@ -51,20 +51,38 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="mb-4">
               <div className="flex items-baseline justify-between border-b border-gray-300 py-1">
-                <span className="font-mono text-black">full stack developer</span>
-                <span className="text-sm text-gray-600"><b>2023 - 2023</b></span>
+                <span className="font-mono text-black">software engineer</span>
+                <span className="text-sm text-gray-600"><b>jan 2023 - mar 2023</b></span>
               </div>
                 <div className="text-sm mt-1 text-gray-700">
-                <b>Mu Methods</b> — full stack developer, led the development and architecture of a component-driven design system utilizing storybook to enhance the design process and promote the reuse of styled components.
+                <b>Mu Methods</b> — led the development and architecture of a component-driven design system utilizing storybook to enhance the design process and promote the reuse of styled components.
                 </div>
             </div>
             <div className="mb-4">
               <div className="flex items-baseline justify-between border-b border-gray-300 py-1">
-                <span className="font-mono text-black">full stack developer</span>
+                <span className="font-mono text-black">senior software engineer</span>
                 <span className="text-sm text-gray-600"><b>2020 - 2023</b></span>
               </div>
               <div className="text-sm mt-1 text-gray-700">
-                <b>Red Cedar Enterprises, LLC</b> — full stack developer, building and maintaining data repository and reporting tools for USTRANSCOM Consolidated Architecture Tool Suite (CATS) and USTRANSCOM Global Transportation Network (GTN). 
+                <b>Red Cedar Enterprises, LLC</b> — building and maintaining data repository and reporting tools for USTRANSCOM Consolidated Architecture Tool Suite (CATS) and USTRANSCOM Global Transportation Network (GTN). 
+              </div>
+            </div>
+            <div className="mb-4">
+              <div className="flex items-baseline justify-between border-b border-gray-300 py-1">
+                <span className="font-mono text-black">software analyst</span>
+                <span className="text-sm text-gray-600"><b>jul 2020 -  dec 2020</b></span>
+              </div>
+              <div className="text-sm mt-1 text-gray-700">
+                <b>Vantage Credit Union</b> — provided programming support for the core application, documenting system processes, and managed stakeholder communication from a technical perspective. 
+              </div>
+            </div>
+            <div className="mb-4">
+              <div className="flex items-baseline justify-between border-b border-gray-300 py-1">
+                <span className="font-mono text-black">software engineer</span>
+                <span className="text-sm text-gray-600"><b>jul 2020 -  dec 2020</b></span>
+              </div>
+              <div className="text-sm mt-1 text-gray-700">
+                <b>Ameren</b> — provided support testing of interfaces and soap services, collecting and organizing data using arcgis and arcmap ensuring proper mapping of utility objects. 
               </div>
             </div>
           </div>

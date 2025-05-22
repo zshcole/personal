@@ -1,58 +1,52 @@
-import React from 'react';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import Link from 'next/link';
 
-const posts = [
-  {
-    date: '24 Apr',
-    title: 'Domain-Driven Design with TypeScript',
-    description: 'Exploring how to implement DDD principles in modern TypeScript applications.',
-    href: '/posts/ddd-typescript',
-  },
-  {
-    date: '15 Apr',
-    title: 'Building Accessible UIs with Tailwind',
-    description: 'Best practices for creating inclusive interfaces using utility-first CSS.',
-    href: '/posts/accessible-tailwind',
-  },
-  {
-    date: '30 Mar',
-    title: 'State Management in 2025',
-    description: 'Comparing modern state management solutions for React applications.',
-    href: '/posts/state-management-2025',
-  },
-  {
-    date: '12 Mar',
-    title: 'Next.js vs. Remix: A Practical Comparison',
-    description: 'Looking at the key differences between these two React frameworks.',
-    href: '/posts/next-vs-remix',
-  },
-  {
-    date: '28 Feb',
-    title: 'Type-Safe API Calls with React Query',
-    description: 'How to leverage TypeScript with React Query for safer API interactions.',
-    href: '/posts/react-query-typescript',
-  },
-];
-
-const PostPage: React.FC = () => {
-    return(
-      <section className="mb-10">
-      <h2 className="text-2xl font-serif mb-4 border-b border-gray-300 pb-1 text-black">posts</h2>
-      <table className="w-full border-collapse">
-        <tbody>
-          {posts.map((post, index) => (
-            <tr key={index} className="border-t border-gray-200 hover:bg-gray-200">
-              <td className="py-2">
-                <span className="text-sm text-gray-500 mr-2">{post.date}:</span>
-                <Link href={post.href} className="text-blue-800 hover:underline">{post.title}</Link>
-                <p className="text-sm text-gray-700 mt-1 ml-12">{post.description}</p>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
-    )
+interface Post {
+  date: string;
+  title: string;
+  description: string;
+  slug: string;
 }
 
-export default PostPage;
+export default async function PostsPage() {
+  const postsDirectory = path.join(process.cwd(), 'posts');
+  const filenames = fs.readdirSync(postsDirectory);
+
+  const posts: Post[] = filenames
+    .filter(filename => filename.endsWith('.mdx'))
+    .map((filename) => {
+      const filePath = path.join(postsDirectory, filename);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const { data } = matter(fileContent);
+      const slug = filename.replace(/\.mdx$/, '');
+
+      return {
+        date: data.date,
+        title: data.title,
+        description: data.description || '',
+        slug,
+      };
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return (
+<section className="mb-10">
+  <h2 className="text-3xl font-serif mb-6 border-b border-gray-400 pb-2 text-gray-800 font-medium">posts</h2>
+  <div className="space-y-4">
+    {posts.map((post) => (
+      <div key={post.slug} className="p-4 rounded-md hover:bg-gray-100 transition duration-150 border border-gray-200 shadow-sm">
+        <div className="flex items-baseline">
+          <span className="text-sm font-medium text-gray-600 mr-3">{post.date}</span>
+          <Link href={`/posts/${post.slug}`} className="text-lg font-medium text-blue-700 hover:text-blue-900 hover:underline">
+            {post.title}
+          </Link>
+        </div>
+        <p className="text-base text-gray-700 mt-2">{post.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+  );
+}
