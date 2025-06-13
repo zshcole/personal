@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>web performance optimization techniques - colburn sanders</title>
+<link rel="stylesheet" href="../../../assets/css/styles.css">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+<meta name="description" content="A detailed blog post on web performance optimization techniques, including code splitting, lazy loading, and caching strategies.">
+<meta name="keywords" content="web performance, optimization, code splitting, lazy loading, caching, e-commerce, React">
+<meta name="author" content="Colburn Sanders">
+<meta property="og:title" content="Web Performance Optimization Techniques">
+</head>
+<body>
+    <header>
+        <h1>web performance optimization techniques.</h1>
+    </header>
+    
+    <nav>
+        <a href="/" alt="resume">home</a>
+       <a href="../../../blog.html" alt="blog">back to blog</a>
+    </nav>
+
+    <main>
+        <article class="blog-post">
+            <div class="post-meta">
+                <span class="post-date">april 10, 2025</span>
+                <span class="post-category">performance</span>
+            </div>
+            
+            <p>
+                when our team was tasked with improving site performance, we faced a complex 
+                e-commerce platform with millions of monthly visitors. here's how we approached 
+                the challenge and achieved a 30% reduction in load times.
+            </p>
+            
+            <h2>code splitting and lazy loading</h2>
+            <p>
+                our first major win came from implementing aggressive code splitting. by breaking 
+                our application into smaller chunks and only loading what's needed for the current 
+                view, we reduced initial JavaScript payload by over 60%.
+            </p>
+            
+            <p>
+                for routes that weren't part of the critical user journey, we implemented lazy loading:
+            </p>
+            
+            <pre><code>
+            // Before
+            import HeavyComponent from './HeavyComponent';
+
+            // After
+            const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
+
+            function MyComponent() {
+            return (
+                &lt;React.Suspense fallback={&lt;Spinner /&gt;}&gt;
+                &lt;HeavyComponent /&gt;
+                &lt;/React.Suspense&gt;
+            );
+            }
+            </code></pre>
+            
+            <h2>strategic caching</h2>
+            <p>
+                we implemented a multi-layered caching strategy:
+            </p>
+            
+            <ul>
+                <li>http caching with appropriate cache-control headers</li>
+                <li>service worker caching for offline capabilities</li>
+                <li>application-level caching for expensive api calls</li>
+                <li>cdn caching for static assets with long ttls</li>
+            </ul>
+            
+            <p>
+                this approach not only improved performance but also reduced server load and 
+                bandwidth costs significantly.
+            </p>
+            
+            <div class="author-bio">
+                <img src="../../assets/images/profile-small.jpg" alt="Colburn Sanders" class="author-image">
+                <p>
+                    <strong>colburn sanders</strong> is a senior software engineer with expertise in 
+                    web performance optimization. currently working at new balance where he contributes to 
+                    initiatives to improve site speed and user experience.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 colburn sanders. all rights reserved.</p>
+        <p><em>contact: colburnsanders@gmail.com</em></p>
+    </footer>
+</body>
+</html>

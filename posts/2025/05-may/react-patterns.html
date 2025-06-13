@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>advanced react patterns i use daily - colburn sanders</title>
+<link rel="stylesheet" href="../../../assets/css/styles.css">
+<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+<meta name="description" content="A blog post discussing advanced React patterns such as compound components and render props that enhance code maintainability and scalability.">
+<meta name="keywords" content="React, advanced patterns, compound components, render props, web development, JavaScript">
+<meta name="author" content="Colburn Sanders">
+<meta property="og:title" content="Advanced React Patterns I Use Daily">
+<meta property="og:description" content="Exploring advanced React patterns that improve code maintainability and scalability in daily development.">
+<meta property="og:type" content="article">
+</head>
+<body>
+    <header>
+        <h1>advanced react patterns i use daily.</h1>
+    </header>
+    
+    <nav>
+        <a href="/" alt="resume">home</a>
+        <a href="../../../blog.html" alt="blog">back to blog</a>
+    </nav>
+
+    <main>
+        <article class="blog-post">
+            <div class="post-meta">
+                <span class="post-date">may 28, 2025</span>
+                <span class="post-category">development</span>
+            </div>
+            
+            <p>
+                after years of building react applications, i've found certain patterns consistently 
+                lead to more maintainable, testable, and scalable codebases. these aren't just 
+                theoretical concepts—they're approaches i rely on daily.
+            </p>
+            
+            <h2>compound components</h2>
+            <p>
+                the compound component pattern has revolutionized how i build complex ui elements. 
+                by creating components that work together through implicit state sharing, i've been 
+                able to build interfaces that are both flexible and intuitive to use.
+            </p>
+            
+            <p>
+                a simple example might look like:
+            </p>
+            
+            <pre><code>
+            // Usage
+            &lt;Dropdown&gt;
+            &lt;Dropdown.Toggle&gt;Options&lt;/Dropdown.Toggle&gt;
+            &lt;Dropdown.Menu&gt;
+                &lt;Dropdown.Item&gt;Profile&lt;/Dropdown.Item&gt;
+                &lt;Dropdown.Item&gt;Settings&lt;/Dropdown.Item&gt;
+                &lt;Dropdown.Item&gt;Logout&lt;/Dropdown.Item&gt;
+            &lt;/Dropdown.Menu&gt;
+            &lt;/Dropdown&gt;
+            </code></pre>
+            
+            <h2>render props</h2>
+            <p>
+                render props have become my go-to solution for sharing behavior between components 
+                without deeply nested component trees. this pattern has been particularly valuable 
+                when building features like:
+            </p>
+            
+            <ul>
+                <li>form validation systems</li>
+                <li>data fetching abstractions</li>
+                <li>complex animations</li>
+            </ul>
+            
+            <p>
+                the key benefit is the inversion of control—consumers decide how to render the ui 
+                based on the state or behavior provided.
+            </p>
+            
+            <div class="author-bio">
+                <img src="../assets/images/profile-small.jpg" alt="Colburn Sanders" class="author-image">
+                <p>
+                    <strong>colburn sanders</strong> is a senior software engineer specializing in 
+                    frontend architecture and react patterns. currently working at new balance 
+                    building scalable e-commerce experiences.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 colburn sanders. all rights reserved.</p>
+        <p><em>contact: colburnsanders@gmail.com</em></p>
+    </footer>
+</body>
+</html>
