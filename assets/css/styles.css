@@ -51,6 +51,20 @@ header {
     to { opacity: 1; }
 }
 
+/* Motivational quote styling */
+.motivational-quote {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 3px solid #000;
+    background-color: #f9f9f9;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 0.5s forwards;
+}
+
 h1 {
     font-size: 2em;
     font-weight: normal;
