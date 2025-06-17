@@ -15,6 +15,16 @@ body {
     max-width: 1000px;
 }
 
+/* Smooth fade-in animation for the entire page */
+body {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* ID selector for the current date container */
 #currentDate {
     margin: 30px 0;
@@ -26,11 +36,44 @@ header {
     margin-bottom: 30px;
 }
 
+.header-quote {
+    font-style: italic;
+    color: #666;
+    font-size: 0.6em;
+    font-weight: normal;
+    margin-left: 15px;
+    opacity: 0;
+    animation: fadeInQuote 1s ease-in 2.5s forwards;
+}
+
+@keyframes fadeInQuote {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 h1 {
     font-size: 2em;
     font-weight: normal;
     margin: 0 0 30px 0;
     letter-spacing: -1px;
+}
+
+/* Typewriter effect for the main heading */
+header h1 {
+    overflow: hidden;
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #000; }
 }
 
 nav {
@@ -46,6 +89,31 @@ nav a {
 
 nav a:hover {
     text-decoration: none;
+}
+
+/* Smooth hover animations for navigation */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #666;
 }
 
 .intro-text {
@@ -133,6 +201,25 @@ main {
 
 section {
     margin-bottom: 10px;
+}
+
+/* Subtle slide-up animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.6s ease forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.4s; }
+section:nth-child(4) { animation-delay: 0.6s; }
+section:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 table {
@@ -386,6 +473,18 @@ input[type="submit"]:hover {
     margin-bottom: 0;
 }
 
+/* Smooth hover effect for experience items */
+.experience-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.experience-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Social media icons */
 .social-icons {
     margin-top: 15px;
@@ -414,4 +513,32 @@ input[type="submit"]:hover {
 
 .icon-linkedin, .icon-github, .icon-twitter {
     font-style: normal;
+}
+
+/* Social icons bounce effect */
+.social-icons a {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: #333;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optional: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
 }
