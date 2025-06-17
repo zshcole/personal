@@ -544,6 +544,72 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        line-height: 1.4;
+    }
+
+    .header-quote {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    /* Disable typewriter effect on mobile for better readability */
+    header h1 {
+        border-right: none;
+        animation: fadeIn 0.8s ease-in;
+        white-space: normal;
+        overflow: visible;
+    }
+
+    nav {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        font-size: 1em;
+    }
+
+    .skills-list {
+        columns: 1;
+    }
+
+    .experience-item {
+        padding: 15px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .header-quote {
+        font-size: 0.7em;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+}
+
 /* Optional: Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -551,7 +617,7 @@ html {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+
     html {
         scroll-behavior: auto;
     }
