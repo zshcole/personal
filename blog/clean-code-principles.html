@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean Code That Stands the Test of Time | colburn sanders</title>
+<link rel="stylesheet" href="../assets/css/new-styles.css">
+<meta name="description" content="Why writing maintainable code matters more than clever solutions.">
+<meta name="author" content="Colburn Sanders">
+</head>
+<body>
+    <div class="container">
+        <nav class="blog-nav">
+            <a href="../blog.html">[Blog]</a>
+        </nav>
+
+        <main>
+            <article class="blog-post">
+                <h1>Clean Code That Stands the Test of Time</h1>
+                <div class="post-meta">
+                    <span class="post-date">June 5, 2025</span>
+                    <span class="post-author">by colburnsanders</span>
+                    <span class="post-views">203 views</span>
+                </div>
+
+                <div class="post-content">
+                    <p>
+                        Early in my career, I thought being a good developer meant writing clever code. 
+                        Complex one-liners, obscure language features, and intricate abstractions felt like 
+                        badges of honor. Then I had to maintain that code six months later, and I learned 
+                        a hard lesson: clever code is often the enemy of good code.
+                    </p>
+
+                    <h2>The True Cost of Complexity</h2>
+                    
+                    <p>
+                        Working on enterprise applications at Red Cedar and now at New Balance, I've seen 
+                        how code complexity compounds over time. What seems like a small shortcut today 
+                        becomes a major roadblock when you need to:
+                    </p>
+
+                    <ul>
+                        <li>Add new features without breaking existing functionality</li>
+                        <li>Debug issues under pressure during production incidents</li>
+                        <li>Onboard new team members who need to understand the system</li>
+                        <li>Refactor code to meet changing business requirements</li>
+                    </ul>
+
+                    <h2>Principles That Matter</h2>
+
+                    <p>
+                        Over the years, I've developed a set of principles that guide how I write code. 
+                        These aren't revolutionary ideas, but they're the ones that have consistently 
+                        made my code more maintainable:
+                    </p>
+
+                    <h3>1. Clarity Over Cleverness</h3>
+                    <p>
+                        If you have to think hard to understand what your code does, imagine how your 
+                        teammates (or future you) will feel. Write code that tells a story.
+                    </p>
+
+                    <h3>2. Single Responsibility</h3>
+                    <p>
+                        Functions and classes should do one thing well. When you find yourself using 
+                        "and" to describe what a function does, it's probably doing too much.
+                    </p>
+
+                    <h3>3. Meaningful Names</h3>
+                    <p>
+                        Variable and function names should explain intent, not just implementation. 
+                        <code>calculateTotalWithTax()</code> is better than <code>calc()</code>.
+                    </p>
+
+                    <h3>4. Consistent Patterns</h3>
+                    <p>
+                        Establish conventions and stick to them. When similar problems are solved 
+                        in similar ways, the codebase becomes predictable and easier to navigate.
+                    </p>
+
+                    <h2>Real-World Examples</h2>
+
+                    <p>
+                        At New Balance, we refactored our checkout flow to follow these principles. 
+                        Instead of one massive function that handled everything from cart validation 
+                        to payment processing, we broke it down into focused, testable components:
+                    </p>
+
+                    <ul>
+                        <li><strong>CartValidator</strong> – ensures cart contents are valid</li>
+                        <li><strong>PriceCalculator</strong> – handles pricing logic and discounts</li>
+                        <li><strong>PaymentProcessor</strong> – manages payment transactions</li>
+                        <li><strong>OrderCreator</strong> – creates and persists order records</li>
+                    </ul>
+
+                    <p>
+                        Each component has a clear responsibility, making the system easier to test, 
+                        debug, and extend. When we needed to add new payment methods, we only had 
+                        to modify the PaymentProcessor.
+                    </p>
+
+                    <h2>The Testing Connection</h2>
+
+                    <p>
+                        Clean code and testable code go hand in hand. When your functions are small, 
+                        focused, and have clear inputs and outputs, writing tests becomes natural. 
+                        And when you have good tests, refactoring becomes safe.
+                    </p>
+
+                    <p>
+                        I've found that if code is hard to test, it's usually a sign that it needs 
+                        to be simplified or broken down further.
+                    </p>
+
+                    <h2>The Long Game</h2>
+
+                    <p>
+                        Writing clean code isn't about following rules for the sake of it – it's about 
+                        building software that can evolve with changing requirements. In my experience, 
+                        the projects that succeed long-term are the ones where:
+                    </p>
+
+                    <ul>
+                        <li>New developers can contribute quickly</li>
+                        <li>Bugs are easy to locate and fix</li>
+                        <li>Features can be added without major rewrites</li>
+                        <li>The codebase remains a joy to work with</li>
+                    </ul>
+
+                    <p>
+                        Clean code isn't just about the code itself – it's about the people who will 
+                        work with it. When you write code that's easy to understand and modify, you're 
+                        not just solving today's problems; you're making tomorrow's solutions possible.
+                    </p>
+
+                    <p>
+                        As I always say: code is like humor. When you have to explain it, it's bad.
+                    </p>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p>colburnsanders</p>
+        </footer>
+    </div>
+
+    <script src="../assets/js/blog-views.js"></script>
+</body>
+</html>

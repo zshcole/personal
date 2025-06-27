@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Performance Optimization for PWAKit | colburn sanders</title>
+<link rel="stylesheet" href="../assets/css/new-styles.css">
+<meta name="description" content="Practical techniques for optimizing Salesforce Commerce Cloud PWAKit applications.">
+<meta name="author" content="Colburn Sanders">
+</head>
+<body>
+    <div class="container">
+        <nav class="blog-nav">
+            <a href="../blog.html">[Blog]</a>
+        </nav>
+
+        <main>
+            <article class="blog-post">
+                <h1>Performance Optimization for PWAKit</h1>
+                <div class="post-meta">
+                    <span class="post-date">April 10, 2025</span>
+                    <span class="post-author">by colburnsanders</span>
+                    <span class="post-views">89 views</span>
+                </div>
+
+                <div class="post-content">
+                    <p>
+                        Working on New Balance's e-commerce platform, I've learned that performance isn't just about 
+                        fast load times – it's about creating experiences that feel instant and responsive. 
+                        PWAKit gives us powerful tools for optimization, but knowing how to use them effectively 
+                        makes all the difference.
+                    </p>
+
+                    <h2>The Performance Challenge</h2>
+                    
+                    <p>
+                        E-commerce sites face unique performance challenges. Users expect product pages to load 
+                        instantly, search results to appear as they type, and checkout flows to be seamless. 
+                        With PWAKit, we're building React applications that need to perform well on everything 
+                        from high-end desktops to budget mobile devices.
+                    </p>
+
+                    <h2>Bundle Size Optimization</h2>
+
+                    <p>
+                        The first rule of PWAKit performance: ship less JavaScript. Here are the techniques 
+                        that have worked best for us:
+                    </p>
+
+                    <ul>
+                        <li><strong>Code splitting</strong> – Load only what users need, when they need it</li>
+                        <li><strong>Tree shaking</strong> – Remove unused code from third-party libraries</li>
+                        <li><strong>Dynamic imports</strong> – Lazy load heavy components and utilities</li>
+                        <li><strong>Bundle analysis</strong> – Regular audits to catch size regressions</li>
+                    </ul>
+
+                    <p>
+                        We reduced our initial bundle size by 40% just by implementing proper code splitting 
+                        for our product detail pages. The checkout flow, which most users never see, is now 
+                        loaded only when needed.
+                    </p>
+
+                    <h2>Caching Strategies</h2>
+
+                    <p>
+                        PWAKit's built-in caching is powerful, but it needs to be configured thoughtfully:
+                    </p>
+
+                    <ol>
+                        <li><strong>Static assets</strong> – Long-term caching with content hashing</li>
+                        <li><strong>API responses</strong> – Smart invalidation based on data freshness needs</li>
+                        <li><strong>Page-level caching</strong> – Different strategies for different page types</li>
+                        <li><strong>Service worker optimization</strong> – Efficient background sync and updates</li>
+                    </ol>
+
+                    <h2>Core Web Vitals</h2>
+
+                    <p>
+                        Google's Core Web Vitals aren't just SEO metrics – they correlate directly with 
+                        conversion rates. Here's how we improved ours:
+                    </p>
+
+                    <ul>
+                        <li><strong>Largest Contentful Paint (LCP)</strong> – Optimized image loading and critical CSS</li>
+                        <li><strong>First Input Delay (FID)</strong> – Reduced main thread blocking with better code splitting</li>
+                        <li><strong>Cumulative Layout Shift (CLS)</strong> – Reserved space for dynamic content</li>
+                    </ul>
+
+                    <h2>Real-World Results</h2>
+
+                    <p>
+                        After implementing these optimizations, we saw:
+                    </p>
+
+                    <ul>
+                        <li>30% reduction in page load times</li>
+                        <li>25% improvement in mobile performance scores</li>
+                        <li>15% increase in conversion rates on mobile devices</li>
+                        <li>Significantly better user experience metrics</li>
+                    </ul>
+
+                    <h2>Tools and Monitoring</h2>
+
+                    <p>
+                        Performance optimization is an ongoing process. We use:
+                    </p>
+
+                    <ul>
+                        <li><strong>Lighthouse CI</strong> – Automated performance testing in our build pipeline</li>
+                        <li><strong>Real User Monitoring</strong> – Understanding actual user experiences</li>
+                        <li><strong>Bundle analyzers</strong> – Regular audits of our JavaScript bundles</li>
+                        <li><strong>Performance budgets</strong> – Preventing regressions before they ship</li>
+                    </ul>
+
+                    <p>
+                        The key is making performance a priority from the start, not something you optimize 
+                        after the fact. With PWAKit's tools and the right approach, you can build e-commerce 
+                        experiences that are both feature-rich and lightning-fast.
+                    </p>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p>colburnsanders</p>
+        </footer>
+    </div>
+
+    <script src="../assets/js/blog-views.js"></script>
+</body>
+</html>
