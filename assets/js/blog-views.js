@@ -1,4 +1,4 @@
-// Blog view counter functionality
+// Blog view counter functionality - Simple localStorage version
 class BlogViewCounter {
     constructor() {
         this.storageKey = 'blog-view-counts';
@@ -10,7 +10,7 @@ class BlogViewCounter {
     initializeViewCounts() {
         const stored = localStorage.getItem(this.storageKey);
         this.viewCounts = stored ? JSON.parse(stored) : {};
-
+        
         // Track views for this session to avoid inflating counts
         const sessionViews = sessionStorage.getItem(this.sessionKey);
         this.sessionViews = sessionViews ? JSON.parse(sessionViews) : {};
@@ -59,14 +59,14 @@ class BlogViewCounter {
     // Update all view counts on blog listing page
     updateBlogListingCounts() {
         const blogPreviews = document.querySelectorAll('.blog-post-preview');
-
+        
         blogPreviews.forEach(preview => {
             const link = preview.querySelector('h2 a');
             if (link) {
                 const href = link.getAttribute('href');
                 const slug = href.split('/').pop().replace('.html', '');
                 const viewElement = preview.querySelector('.post-views');
-
+                
                 if (viewElement) {
                     const count = this.getViewCount(slug);
                     viewElement.textContent = `${count} views`;
@@ -78,14 +78,14 @@ class BlogViewCounter {
     // Update view counts on main page blog preview list
     updateMainPageBlogCounts() {
         const blogPreviewItems = document.querySelectorAll('.blog-preview-item');
-
+        
         blogPreviewItems.forEach(item => {
             const link = item.querySelector('h3 a');
             if (link) {
                 const href = link.getAttribute('href');
                 const slug = href.split('/').pop().replace('.html', '');
                 const viewElement = item.querySelector('.blog-views');
-
+                
                 if (viewElement) {
                     const count = this.getViewCount(slug);
                     viewElement.textContent = `${count} views`;
@@ -103,22 +103,22 @@ class BlogViewCounter {
     // Initialize view tracking for current page
     init() {
         const currentSlug = this.getCurrentBlogSlug();
-
+        
         // If we're on a blog post page, increment and update view count
         if (currentSlug && this.isBlogPostPage()) {
             this.incrementViewCount(currentSlug);
             this.updateViewCountDisplay(currentSlug);
         }
-
+        
         // If we're on the blog listing page, update all counts
-        if (window.location.pathname.includes('blog.html') ||
+        if (window.location.pathname.includes('blog.html') || 
             window.location.pathname.endsWith('/blog')) {
             this.updateBlogListingCounts();
         }
-
+        
         // If we're on the main page (index.html), update blog preview counts
-        if (window.location.pathname.includes('index.html') ||
-            window.location.pathname === '/' ||
+        if (window.location.pathname.includes('index.html') || 
+            window.location.pathname === '/' || 
             window.location.pathname === '') {
             this.updateMainPageBlogCounts();
         }
