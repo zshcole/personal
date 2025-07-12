@@ -521,3 +521,92 @@ footer {
 .blog-views, .blog-date {
     font-size: 0.85rem;
 }
+
+/* Blog image styles */
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* Center images in blog posts */
+.post-content .blog-image,
+.post-content img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Enhanced post metadata styles */
+.post-meta-enhanced {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0 32px 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 0.9rem;
+    color: #666;
+    flex-wrap: wrap;
+}
+
+.post-meta-enhanced .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-meta-enhanced .meta-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.post-meta-enhanced .meta-separator {
+    color: #ccc;
+    font-weight: 300;
+}
+
+.post-tags {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.post-tag {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.post-tag:hover {
+    background-color: #e5e7eb;
+}
+
+/* Responsive adjustments for post meta */
+@media (max-width: 640px) {
+    .post-meta-enhanced {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .post-meta-enhanced .meta-separator {
+        display: none;
+    }
+}
